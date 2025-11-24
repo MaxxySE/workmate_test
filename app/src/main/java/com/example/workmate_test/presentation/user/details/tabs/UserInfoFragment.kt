@@ -8,7 +8,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.workmate_test.R
-import com.example.workmate_test.databinding.FragmentUserInfoBinding // Binding сгенерировался сам
+import com.example.workmate_test.databinding.FragmentUserInfoBinding
 import com.example.workmate_test.presentation.user.details.DetailsViewModel
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel

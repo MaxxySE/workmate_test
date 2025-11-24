@@ -28,7 +28,7 @@ class GenerateViewModel(
             if (result != null) {
                 _state.value = GenerateState.Success(result)
             } else {
-                _state.value = GenerateState.Error("Unable to load data")
+                _state.value = GenerateState.Error("Не получилось загрузить данные. Возможно отсутствует интернет.")
             }
         }
     }
