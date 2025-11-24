@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">workmate_test</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="generate_title">Generate user</string>
+    <string name="generate_gender_title">Select Gender:</string>
+    <string name="generate_nationality_title">Select Nationality:</string>
+    <string name="generate_button">Generate</string>
+
+    <string name="usercard_name">Example Name</string>
+    <string name="usercard_phone">+7 (999) 999 99 99</string>
+    <string name="usercard_country">RU</string>
+
+    <string name="detailed_greeting">Hi how are you today?\nI`m</string>
+    <string name="detailed_name">Example Name</string>
+
+    <string name="personal_fname">Example</string>
+    <string name="personal_lname">Name</string>
+    <string name="personal_gender">Male</string>
+    <string name="personal_age">33</string>
+    <string name="personal_birthdate">1992–10–01</string>
+    <string name="personal_phone">+7 (999) 999 99 99</string>
+    <string name="personal_mail">examplename@mail.com</string>
+    <string name="personal_nationality">RU</string>
+
+</resources>
