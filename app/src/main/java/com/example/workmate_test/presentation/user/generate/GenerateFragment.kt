@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -29,6 +30,9 @@ class GenerateFragment : Fragment(R.layout.fragment_generate) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentGenerateBinding.bind(view)
+
+        val isRoot = findNavController().previousBackStackEntry == null
+        binding.backButton.isVisible = !isRoot
 
         setupSpinners()
         setupListeners()
@@ -71,12 +75,14 @@ class GenerateFragment : Fragment(R.layout.fragment_generate) {
                             binding.generateButton.isEnabled = true
                             binding.generateButton.text = getString(R.string.generate_button)
 
-                            findNavController().popBackStack()
+                            findNavController().navigate(R.id.action_generateFragment_to_listFragment)
                         }
                         is GenerateState.Error -> {
                             binding.generateButton.isEnabled = true
                             binding.generateButton.text = getString(R.string.generate_button)
                             Toast.makeText(requireContext(), state.message, Toast.LENGTH_LONG).show()
+
+                            findNavController().navigate(R.id.action_generateFragment_to_listFragment)
                         }
                     }
                 }
